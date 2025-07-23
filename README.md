@@ -28,4 +28,4 @@ App de gestión de inventario para productos agotados, desarrollada como parte d
 
 ## 👨‍💻 Autor
 
-Sergy Ferreira – [GitHub](https://github.com/Sergy-octane)
+Sergy Ferreira – [GitHub](https://github.com/Sergy-octane) con valentina caicedo 
