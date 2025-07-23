@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2d006a; 
+    color: white;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .app-container {
+    width: 100%;
+    max-width: 360px;
+    background-color: #2d006a;
+    min-height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .icono {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .search-box {
+    flex: 1;
+    margin: 0 10px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+
+  .categoria {
+    background-color: #9148b3;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+
+  .grid-productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  
+  .producto {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    color: black;
+  }
+  
+  .producto img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .estado {
+    background-color: #8b1589;
+    color: white;
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  
