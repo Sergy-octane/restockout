@@ -18,13 +18,13 @@ App de gestión de inventario para productos agotados, desarrollada como parte d
 ## Vista previa de la aplicación
 
 ### Página de Inicio
-![Captura de inicio](assets/inicio.png)
+![Captura de inicio](assets/inicio.jpg)
 
 ### Dashboard
-![Dashboard](assets/dashboard.png)
+![Dashboard](assets/dashboard.jpg)
 
 ### Productos Agotados
-![Agotados](assets/agotados.png)
+![Agotados](assets/agotados.jpg)
 
 ## 👨‍💻 Autor
 
