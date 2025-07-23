@@ -1,4 +1,3 @@
-# RestockOut
 # RestockOut 📦
 
 App de gestión de inventario para productos agotados, desarrollada como parte de mi formación en el SENA.
@@ -27,9 +26,6 @@ App de gestión de inventario para productos agotados, desarrollada como parte d
 ### Productos Agotados
 ![Agotados](assets/agotados.png)
 
-
-
 ## 👨‍💻 Autor
 
 Sergy Ferreira – [GitHub](https://github.com/Sergy-octane)
-
