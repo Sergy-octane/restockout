@@ -16,7 +16,17 @@ App de gestión de inventario para productos agotados, desarrollada como parte d
 - Firebase (Auth y DB)
 - Figma (Diseño UI)
 
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/31c7d387-cda5-481f-a751-2c590bb01b18" />
+## Vista previa de la aplicación
+
+### Página de Inicio
+![Captura de inicio](assets/inicio.png)
+
+### Dashboard
+![Dashboard](assets/dashboard.png)
+
+### Productos Agotados
+![Agotados](assets/agotados.png)
+
 
 
 ## 👨‍💻 Autor
