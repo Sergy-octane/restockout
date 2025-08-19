@@ -3,8 +3,9 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     const email = document.getElementById("email").value;
     const pass = document.getElementById("password").value;
   
-    if (email === "admin@demo.com" && pass === "123456") {
+    if (email && pass) {
       alert("¡Login exitoso!");
+      window.location.href = "../restockout-dashboard/index.html";
     } else {
       alert("Correo o contraseña incorrectos.");
     }
