@@ -6,6 +6,9 @@
   <title>Dashboard - Restockout</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+<script src="script.js"></script>
+</body>
+</html>
 <body>
   <div class="app-container">
 
@@ -16,13 +19,13 @@
     <p class="saludo">¡Hola!, Reporta qué productos necesitas reponer.</p>
 
 
-    <div class="buscador">
-  <form id="searchForm">
-    <img src="Buscar.jpg" alt="Buscar" />
-    <input type="text" id="search" placeholder="Buscar producto..." required />
-    <img src="Microfono.png" alt="Micrófono" />
-  </form>
+   <div class="buscador">
+  <img src="Buscar.jpg" alt="Buscar" />
+  <input type="text" id="search" placeholder="Buscar producto..." autocomplete="off"/>
+  <img src="Microfono.png" alt="Micrófono" />
+  <ul id="suggestions" class="suggestions"></ul>
 </div>
+
 
 
 
