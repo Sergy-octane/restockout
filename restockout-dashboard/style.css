@@ -37,6 +37,7 @@ body {
     padding: 5px 10px;
     gap: 8px;
     margin-bottom: 20px;
+    position:relative;
   }
   
   .buscador input {
@@ -104,4 +105,29 @@ body {
     color: #2d006a; 
     margin-bottom: 4px;
   }
-  
+  .suggestions {
+  position: absolute;
+  top: 100%; /* aparece justo debajo del input */
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 5px;
+  list-style: none;
+  padding: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 10;
+  color: black; /* texto negro para que se lea sobre fondo blanco */
+}
+
+.suggestions li {
+  padding: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.suggestions li:hover {
+  background: #f0f0f0;
+}
