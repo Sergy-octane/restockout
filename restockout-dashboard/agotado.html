@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reportar Producto Agotado - RestockOut</title>
+    <link rel="stylesheet" href="agotado.css">
+    </head>
+<body>
+    <div class="container">
+        <h2>Reportar Producto Agotado</h2>
+        <form id="reportForm">
+            <label for="producto">Nombre del producto:</label>
+            <input type="text" id="producto" name="producto" required>
+
+            <label for="detalle">Observaciones:</label>
+            <textarea id="detalle" name="detalle" rows="4" required></textarea>
+
+            <button type="submit">Reportar</button>
+        </form>
+        <div class="message" id="mensaje">✅ Producto reportado correctamente.</div>
+    </div>
+     <script src="agotado.js"></script>
+</body>
+</html>
