@@ -131,3 +131,21 @@ body {
 .suggestions li:hover {
   background: #f0f0f0;
 }
+.ayuda-btn {
+  position: fixed;        /* lo fija en la pantalla */
+  bottom: 20px;           /* distancia desde abajo */
+  right: 20px;            /* distancia desde la derecha */
+  background-color: #25D366; /* verde de WhatsApp */
+  color: white;
+  border: none;
+  border-radius: 50px;    /* lo hace redondito */
+  padding: 15px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+.ayuda-btn:hover {
+  background-color: #1ebe5d; /* verde más oscuro al pasar el mouse */
+}
