@@ -20,5 +20,17 @@
         <div class="message" id="mensaje">✅ Producto reportado correctamente.</div>
     </div>
      <script src="agotado.js"></script>
+     <script>
+  const data = JSON.parse(localStorage.getItem("productoAgotado"));
+  if (data) {
+    const contenedor = document.getElementById("lista-agotados");
+    contenedor.innerHTML += `
+      <div class="producto-agotado">
+        <p><strong>${data.nombre}</strong> - ${data.unidades}</p>
+      </div>
+    `;
+  }
+</script>
+
 </body>
 </html>

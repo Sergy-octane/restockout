@@ -45,3 +45,28 @@
         }
     }
 });
+// Seleccionamos todos los botones de "Marcar como agotado"
+const botonesAgotado = document.querySelectorAll(".agotado-btn");
+
+// Recorremos todos los botones
+botonesAgotado.forEach((boton) => {
+  boton.addEventListener("click", () => {
+    // Obtenemos el contenedor del producto al que pertenece el botón
+    const producto = boton.closest(".producto");
+
+    // Extraemos la info del producto
+    const nombre = producto.querySelector(".nombre-producto").textContent;
+    const unidades = producto.querySelector(".unidades").textContent;
+
+    // Guardamos esa info en localStorage para pasarla a la otra página
+    localStorage.setItem(
+      "productoAgotado",
+      JSON.stringify({ nombre, unidades })
+    );
+
+    // Redirigimos al index de "Agotados"
+    window.location.href = "agotado.html"; // cámbialo por la ruta real
+  });
+});
+
+

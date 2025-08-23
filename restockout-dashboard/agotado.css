@@ -1,6 +1,6 @@
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color:#2d006a;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -15,7 +15,7 @@
         }
         h2 {
             text-align: center;
-            color: #333;
+            color:  #6a0dad;
         }
         label {
             display: block;
@@ -30,19 +30,19 @@
             border: 1px solid #ccc;
         }
         button {
-            background-color: #28a745;
+            background-color: #6a0dad;
             color: white;
             border: none;
             margin-top: 20px;
             cursor: pointer;
         }
         button:hover {
-            background-color: #218838;
+            background-color: #6a0dad;
         }
         .message {
             margin-top: 20px;
             font-weight: bold;
-            color: green;
+            color:  #6a0dad;
             display: none;
         }
     
