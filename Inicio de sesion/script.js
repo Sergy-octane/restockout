@@ -5,7 +5,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   
     if (email && pass) {
       alert("¡Login exitoso!");
-      window.location.href = "../restockout-dashboard/index.html";
+      window.location.href = "restockout-dashboard/index.html";
     } else {
       alert("Correo o contraseña incorrectos.");
     }
