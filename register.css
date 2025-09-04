@@ -1,0 +1,78 @@
+/* register.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color:#5a099c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.register-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 400px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #555;
+}
+
+input, select, textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #5a099c;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a864e0;
+}
+
+.terms {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.terms input {
+  margin-right: 8px;
+}
+
+p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+p a {
+  color: #5a099c;
+  text-decoration: none; /* quita el subrayado */
+  font-weight: bold;
+}
