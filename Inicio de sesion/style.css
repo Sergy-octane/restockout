@@ -95,5 +95,26 @@
 .ayuda-btn:hover {
   background-color: #1ebe5d; /* verde más oscuro al pasar el mouse */
 }
+.mensaje-login {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  display: none; /* oculto al inicio */
+}
+
+.mensaje-login.exito {
+  background-color: #d4edda;
+  color: #5a099c;
+  border: 1px solid #c3e6cb;
+}
+
+.mensaje-login.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
 
   
