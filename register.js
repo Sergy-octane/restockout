@@ -1,4 +1,26 @@
-document.getElementById("registerForm").addEventListener("submit", function(e) {
+// Importamos módulos
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+// Configuración de Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyCGCDZR6yaMyHR_pYPMSQVjjm-V9nSFG0k",
+  authDomain: "restockout.firebaseapp.com",
+  projectId: "restockout",
+  storageBucket: "restockout.appspot.com",
+  messagingSenderId: "440311872963",
+  appId: "1:440311872963:web:afea11b412d84aa0d75176"
+};
+
+// Inicializar Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+console.log("✅ Firebase configurado correctamente");
+
+// Manejo del formulario
+document.getElementById("registerForm").addEventListener("submit", async function (e) {
   e.preventDefault();
 
   const name = document.getElementById("name").value;
@@ -20,10 +42,25 @@ document.getElementById("registerForm").addEventListener("submit", function(e) {
     return;
   }
 
-  // Guardar datos en localStorage como simulación
-  const userData = { name, email, phone, username, password, role };
-  localStorage.setItem("userData", JSON.stringify(userData));
+  try {
+    // Crear usuario
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
 
-  alert("✅ Registro exitoso. Ahora puedes iniciar sesión.");
-  window.location.href = "index.html";
+    // Guardar datos en Firestore
+    await setDoc(doc(db, "usuarios", user.uid), {
+      name,
+      email,
+      phone,
+      username,
+      role,
+      createdAt: new Date()
+    });
+
+    alert("✅ Registro exitoso. Ahora puedes iniciar sesión.");
+    window.location.href = "index.html";
+  } catch (error) {
+    console.error("Error en el registro:", error);
+    alert("❌ " + error.message);
+  }
 });

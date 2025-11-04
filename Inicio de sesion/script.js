@@ -1,10 +1,24 @@
-document.getElementById("loginForm").addEventListener("submit", function (e) {
+// Inicializar Firebase Auth
+const auth = firebase.auth();
+
+document.getElementById("loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
+
   const email = document.getElementById("email").value;
-  const pass = document.getElementById("password").value;
+  const password = document.getElementById("password").value;
   const mensajeLogin = document.getElementById("mensajeLogin");
 
-  if (email && pass) {
+  if (!email || !password) {
+    mensajeLogin.textContent = "❌ Debes ingresar correo y contraseña.";
+    mensajeLogin.className = "mensaje-login error";
+    mensajeLogin.style.display = "block";
+    return;
+  }
+
+  try {
+    // 🔐 Iniciar sesión con Firebase
+    await auth.signInWithEmailAndPassword(email, password);
+
     mensajeLogin.textContent = "✅ ¡Login exitoso!";
     mensajeLogin.className = "mensaje-login exito";
     mensajeLogin.style.display = "block";
@@ -13,19 +27,19 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     setTimeout(() => {
       window.location.href = "restockout-dashboard/index.html";
     }, 1500);
-  } else {
-    mensajeLogin.textContent = "❌ Correo o contraseña incorrectos.";
+
+  } catch (error) {
+    console.error("Error al iniciar sesión:", error);
+    mensajeLogin.textContent = "❌ Correo o contraseña incorrectos o usuario no registrado.";
     mensajeLogin.className = "mensaje-login error";
     mensajeLogin.style.display = "block";
   }
 });
 
-  // Botón de ayuda que abre WhatsApp
+// 📞 Botón de ayuda que abre WhatsApp
 document.getElementById("ayuda-btn").addEventListener("click", () => {
-  const numero = "573058962619"; // 👉 reemplaza con tu número
+  const numero = "573058962619"; // 👉 tu número
   const mensaje = encodeURIComponent("¡Hola! Necesito ayuda con RestockOut.");
   const url = `https://wa.me/${numero}?text=${mensaje}`;
   window.open(url, "_blank"); // abre en una pestaña nueva
 });
-
-  
