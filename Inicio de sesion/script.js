@@ -1,11 +1,28 @@
-// Inicializar Firebase Auth
-const auth = firebase.auth();
+// Importar módulos modernos de Firebase
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
+// Configuración Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyCGCDZR6yaMyHR_pYPMSQVjjm-V9nSFG0k",
+  authDomain: "restockout.firebaseapp.com",
+  projectId: "restockout",
+  storageBucket: "restockout.appspot.com",
+  messagingSenderId: "440311872963",
+  appId: "1:440311872963:web:afea11b412d84aa0d75176"
+};
+
+// Inicializar Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+console.log("✅ Firebase (Auth) conectado correctamente");
+
+// 🧾 Manejador del formulario de inicio de sesión
 document.getElementById("loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
   const mensajeLogin = document.getElementById("mensajeLogin");
 
   if (!email || !password) {
@@ -16,14 +33,14 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
   }
 
   try {
-    // 🔐 Iniciar sesión con Firebase
-    await auth.signInWithEmailAndPassword(email, password);
+    // Iniciar sesión con Firebase Authentication
+    await signInWithEmailAndPassword(auth, email, password);
 
     mensajeLogin.textContent = "✅ ¡Login exitoso!";
     mensajeLogin.className = "mensaje-login exito";
     mensajeLogin.style.display = "block";
 
-    // Redirige después de 1.5 segundos
+    // Redirigir al dashboard después de 1.5 segundos
     setTimeout(() => {
       window.location.href = "restockout-dashboard/index.html";
     }, 1500);
@@ -36,10 +53,10 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
   }
 });
 
-// 📞 Botón de ayuda que abre WhatsApp
+// 📞 Botón de ayuda por WhatsApp
 document.getElementById("ayuda-btn").addEventListener("click", () => {
   const numero = "573058962619"; // 👉 tu número
   const mensaje = encodeURIComponent("¡Hola! Necesito ayuda con RestockOut.");
   const url = `https://wa.me/${numero}?text=${mensaje}`;
-  window.open(url, "_blank"); // abre en una pestaña nueva
+  window.open(url, "_blank");
 });
