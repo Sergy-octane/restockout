@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Reportar Producto Agotado - RestockOut</title>
     <link rel="stylesheet" href="agotado.css">
-    </head>
+</head>
 <body>
     <div class="container">
         <h2>Reportar Producto Agotado</h2>
@@ -17,20 +17,13 @@
 
             <button type="submit">Reportar</button>
         </form>
-        <div class="message" id="mensaje">✅ Producto reportado correctamente.</div>
-    </div>
-     <script src="agotado.js"></script>
-     <script>
-  const data = JSON.parse(localStorage.getItem("productoAgotado"));
-  if (data) {
-    const contenedor = document.getElementById("lista-agotados");
-    contenedor.innerHTML += `
-      <div class="producto-agotado">
-        <p><strong>${data.nombre}</strong> - ${data.unidades}</p>
-      </div>
-    `;
-  }
-</script>
 
+        <div class="message" id="mensaje">✅ Producto reportado correctamente.</div>
+
+        <!-- Contenedor para mostrar los productos reportados -->
+        <div id="lista-agotados"></div>
+    </div>
+
+    <script src="agotado.js"></script>
 </body>
 </html>
