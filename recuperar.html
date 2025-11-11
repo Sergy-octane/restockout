@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar Contraseña - RestockOut</title>
+  <link rel="stylesheet" href="recuperar.css">
+</head>
+<body>
+  <header>
+    <h1>RestockOut</h1>
+  </header>
+
+  <main class="contenedor">
+    <h2>Recuperar Contraseña</h2>
+    <p>Ingresa tu correo electrónico y te enviaremos las instrucciones para recuperar tu cuenta.</p>
+
+    <form id="recuperarForm">
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" placeholder="ejemplo@correo.com" required>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <p id="mensaje"></p>
+
+    <a href="index.html" class="volver">Volver al inicio</a>
+  </main>
+
+  <footer>
+    <p>© 2025 RestockOut — Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('recuperarForm');
+    const mensaje = document.getElementById('mensaje');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+
+      if (email === "") {
+        mensaje.textContent = "Por favor, escribe un correo válido.";
+        mensaje.style.color = "red";
+      } else {
+        mensaje.textContent = "Las instrucciones han sido enviadas a tu correo.";
+        mensaje.style.color = "green";
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>
