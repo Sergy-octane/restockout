@@ -3,15 +3,17 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   body {
-    font-family: 'Arial', sans-serif;
-    background: #2d006a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+  font-family: 'Arial', sans-serif;
+  background: #2d006a;
+  display: flex;
+  flex-direction: column; /* organiza login + footer verticalmente */
+  justify-content: center; /* centra el login */
+  min-height: 100vh;
+  margin: 0;
+}
+
   
   .login-container {
     background: white;
@@ -115,6 +117,23 @@
   color: #721c24;
   border: 1px solid #f5c6cb;
 }
+.footer {
+  text-align: center;
+  color: #fff; /* color blanco para contrastar con fondo morado */
+  font-size: 0.9em;
+  padding: 15px 0;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: auto; /* lo empuja hacia el final */
+}
+.main-container {
+  flex: 1; /* ocupa todo el espacio disponible */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 
 
   
