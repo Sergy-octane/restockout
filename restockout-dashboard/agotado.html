@@ -3,27 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Reportar Producto Agotado - RestockOut</title>
+    <!-- Enlaza la hoja de estilos específica para esta página -->
     <link rel="stylesheet" href="agotado.css">
 </head>
 <body>
     <div class="container">
+        <!-- Título de la página -->
         <h2>Reportar Producto Agotado</h2>
+
+        <!-- Formulario para reportar un producto -->
         <form id="reportForm">
+            <!-- Input para el nombre del producto -->
             <label for="producto">Nombre del producto:</label>
             <input type="text" id="producto" name="producto" required>
 
+            <!-- Textarea para observaciones o detalles adicionales -->
             <label for="detalle">Observaciones:</label>
             <textarea id="detalle" name="detalle" rows="4" required></textarea>
 
+            <!-- Botón de envío del formulario -->
             <button type="submit">Reportar</button>
         </form>
 
+        <!-- Mensaje que aparece cuando el producto se reporta correctamente -->
         <div class="message" id="mensaje">✅ Producto reportado correctamente.</div>
 
-        <!-- Contenedor para mostrar los productos reportados -->
+        <!-- Contenedor donde se mostrarán los productos reportados -->
         <div id="lista-agotados"></div>
     </div>
 
+    <!-- Enlaza el script que controla la funcionalidad de reportar productos -->
     <script src="agotado.js"></script>
 </body>
 </html>

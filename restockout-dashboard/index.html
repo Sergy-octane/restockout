@@ -4,55 +4,60 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dashboard - Restockout</title>
+  <!-- Enlazamos el CSS del dashboard -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
-</body>
-</html>
 <body>
+  <!-- Contenedor principal de toda la app -->
   <div class="app-container">
 
+    <!-- Botón de ayuda (WhatsApp) fijo en pantalla -->
     <button id="ayuda-btn" class="ayuda-btn">¿Necesitas ayuda?</button>
 
+    <!-- Logo de la aplicación -->
     <img src="Logo.jpg" alt="Restockout" class="logo" />
 
-
+    <!-- Saludo inicial para el usuario -->
     <p class="saludo">¡Hola!, Reporta qué productos necesitas reponer.</p>
 
+    <!-- Buscador de productos -->
+    <div class="buscador">
+      <img src="Buscar.jpg" alt="Buscar" />
+      <input type="text" id="search" placeholder="Buscar producto..." autocomplete="off"/>
+      <img src="Microfono.png" alt="Micrófono" />
+      <!-- Lista de sugerencias mientras el usuario escribe -->
+      <ul id="suggestions" class="suggestions"></ul>
+    </div>
 
-   <div class="buscador">
-  <img src="Buscar.jpg" alt="Buscar" />
-  <input type="text" id="search" placeholder="Buscar producto..." autocomplete="off"/>
-  <img src="Microfono.png" alt="Micrófono" />
-  <ul id="suggestions" class="suggestions"></ul>
-</div>
-
-
-
-
+    <!-- Primer producto de ejemplo -->
     <div class="producto">
       <img src="Producto1.jpg" alt="Producto 1" class="producto-img" />
       <div class="info">
         <p class="nombre-producto">Leche Entera Colanta</p>
         <p class="unidades">Quedan 2 unidades</p>
+        <!-- Botón para marcar el producto como agotado -->
         <button class="agotado-btn">Marcar como agotado</button>
       </div>
     </div>
 
-
+    <!-- Segundo producto de ejemplo -->
     <div class="producto">
       <img src="Producto2.jpg" alt="Producto 2" class="producto-img" />
       <div class="info">
         <p class="nombre-producto">Leche Entera Alpina</p>
         <p class="unidades">Quedan 0 unidades</p>
+        <!-- Botón para marcar el producto como agotado -->
         <button class="agotado-btn">Marcar como agotado</button>
       </div>
     </div>
 
-
+    <!-- Botón para alertar al proveedor de productos faltantes -->
     <button class="alerta-btn">Alertar a mi proveedor</button>
 
   </div>
+
+  <!-- Enlazamos el JavaScript que controla interacciones del dashboard -->
   <script src="script.js"></script>
 </body>
 </html>

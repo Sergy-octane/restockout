@@ -1,76 +1,86 @@
+/* Estilo general del body */
 body {
-    font-family: Arial, sans-serif;
-    background-color:#2d006a;
-    display: flex;
+    font-family: Arial, sans-serif; /* Fuente legible */
+    background-color:#2d006a;        /* Fondo morado oscuro */
+    display: flex;                   /* Usamos flexbox para centrar contenido */
     flex-direction: column;
-    align-items: center;
-    padding: 40px;
+    align-items: center;             /* Centra horizontalmente */
+    padding: 40px;                   /* Espacio alrededor */
 }
 
+/* Contenedor principal de la tarjeta */
 .container {
-    background-color: white;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 400px;
+    background-color: white;         /* Fondo blanco para contraste */
+    border-radius: 10px;             /* Bordes redondeados */
+    padding: 30px;                   /* Espacio interno */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave */
+    width: 400px;                     /* Ancho fijo */
 }
 
+/* Título centrado y color morado */
 h2 {
     text-align: center;
     color:  #6a0dad;
 }
 
+/* Etiquetas de formulario */
 label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
+    display: block;                  /* Cada etiqueta en su línea */
+    margin-top: 15px;                /* Separación del anterior elemento */
+    font-weight: bold;               /* Negrita */
 }
 
+/* Inputs, textarea y botones con estilos consistentes */
 input, textarea, button {
-    width: 100%;
+    width: 100%;                     /* Ocupan todo el ancho del contenedor */
     padding: 10px;
     margin-top: 5px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc;          /* Borde gris claro */
 }
 
+/* Botón de enviar */
 button {
-    background-color: #6a0dad;
+    background-color: #6a0dad;       /* Morado intenso */
     color: white;
     border: none;
     margin-top: 20px;
-    cursor: pointer;
+    cursor: pointer;                 /* Cambio de cursor al pasar mouse */
 }
 
+/* Hover del botón: más oscuro al pasar mouse */
 button:hover {
     background-color: #4b0060;
 }
 
+/* Mensaje de éxito o alerta */
 .message {
     margin-top: 20px;
     font-weight: bold;
     color:  #6a0dad;
-    display: none;
+    display: none;                   /* Se muestra solo cuando es necesario */
 }
 
-/* Lista de productos reportados */
+/* Contenedor de productos reportados */
 #lista-agotados {
     margin-top: 30px;
-    max-height: 300px;
+    max-height: 300px;               /* Altura máxima con scroll */
     overflow-y: auto;
 }
 
+/* Cada producto reportado */
 .producto-agotado {
-    background-color: #f3e5ff;
-    border-left: 5px solid #6a0dad;
+    background-color: #f3e5ff;       /* Fondo lila claro */
+    border-left: 5px solid #6a0dad;  /* Línea lateral morada */
     padding: 10px 15px;
     margin-bottom: 10px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra sutil */
 }
 
+/* Texto de cada producto */
 .producto-agotado p {
     margin: 0;
     font-weight: bold;
-    color: #4a0073;
+    color: #4a0073;                  /* Morado oscuro */
 }
