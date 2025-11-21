@@ -1,102 +1,119 @@
+/* Estilos generales de la página */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #5a099c;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
-  margin: 0;
-  padding-top: 60px;
+  font-family: Arial, sans-serif; /* Fuente principal */
+  background-color: #5a099c; /* Fondo morado del proyecto */
+  display: flex; /* Usamos flexbox para centrar */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: flex-start; /* Colocar el contenido un poco arriba */
+  height: 100vh; /* Alto del viewport */
+  margin: 0; 
+  padding-top: 60px; /* Espacio superior */
 }
 
+/* Contenedor principal del formulario de registro */
 .register-container {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  width: 340px;
-  margin-top: 30px;
+  background: #fff; /* Fondo blanco */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra del recuadro */
+  width: 340px; /* Ancho fijo */
+  margin-top: 30px; /* Separación vertical */
 }
 
+/* Título principal */
 h1 {
-  text-align: center;
-  margin-bottom: 15px;
-  color: #333;
-  font-size: 20px;
+  text-align: center; /* Centrado */
+  margin-bottom: 15px; /* Espaciado inferior */
+  color: #333; /* Color del texto */
+  font-size: 20px; /* Tamaño */
 }
 
+/* Estilos del formulario */
 form {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Ingresos uno debajo del otro */
 }
 
+/* Etiquetas de los inputs */
 label {
   margin-top: 10px;
-  font-weight: bold;
-  color: #555;
+  font-weight: bold; /* Texto en negrita */
+  color: #555; /* Color gris */
   font-size: 14px;
 }
 
+/* Inputs y selects del formulario */
 input, select {
   margin-top: 4px;
   padding: 8px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  border-radius: 8px; /* Bordes redondeados */
+  border: 1px solid #ccc; /* Borde gris */
   font-size: 14px;
 }
 
+/* Botón de registro */
 button {
   margin-top: 15px;
   padding: 10px;
   border: none;
   border-radius: 8px;
-  background-color: #5a099c;
+  background-color: #5a099c; /* Color morado principal */
   color: #fff;
   font-size: 15px;
-  cursor: pointer;
+  cursor: pointer; /* Mano al pasar */
 }
 
+/* Efecto cuando el usuario pasa el mouse */
 button:hover {
-  background-color: #a864e0;
+  background-color: #a864e0; /* Morado más claro */
 }
 
+/* Texto inferior “¿Ya tienes cuenta?” */
 p {
   margin-top: 20px;
   text-align: center;
   font-size: 14px;
 }
 
+/* Enlaces dentro de los párrafos */
 p a {
-  color: #5a099c;
-  text-decoration: none;
+  color: #5a099c; /* Morado */
+  text-decoration: none; /* Sin subrayado */
   font-weight: bold;
 }
 
-/* Mensajes */
+/* ---------------------------
+   ESTILOS PARA MENSAJES
+---------------------------- */
+
+/* Caja del mensaje (éxito o error) */
 .mensaje-registro {
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 8px;
   text-align: center;
   font-weight: bold;
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  display: none; /* Oculto por defecto */
+  opacity: 0; /* Transparencia inicial */
+  transition: opacity 0.3s ease; /* Animación suave */
 }
 
+/* Clase que muestra el mensaje */
 .mensaje-registro.show {
   display: block;
-  opacity: 1;
+  opacity: 1; /* Hacer visible */
 }
 
+/* Estilo visual para mensajes de éxito */
 .mensaje-registro.exito {
-  background-color: #d4edda;
-  color: #155724;
+  background-color: #d4edda; /* Verde claro */
+  color: #155724; /* Texto verde oscuro */
   border: 1px solid #c3e6cb;
 }
 
+/* Estilo visual para errores */
 .mensaje-registro.error {
-  background-color: #f8d7da;
-  color: #721c24;
+  background-color: #f8d7da; /* Rojo claro */
+  color: #721c24; /* Rojo fuerte */
   border: 1px solid #f5c6cb;
 }
