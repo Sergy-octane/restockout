@@ -1,25 +1,28 @@
-/* register.css */
 body {
   font-family: Arial, sans-serif;
-  background-color:#5a099c;
+  background-color: #5a099c;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 100vh;
   margin: 0;
+  padding-top: 60px;
 }
 
 .register-container {
   background: #fff;
-  padding: 30px;
+  padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  width: 400px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  width: 340px;
+  margin-top: 30px;
 }
 
 h1 {
   text-align: center;
+  margin-bottom: 15px;
   color: #333;
+  font-size: 20px;
 }
 
 form {
@@ -28,26 +31,28 @@ form {
 }
 
 label {
-  margin-top: 15px;
+  margin-top: 10px;
   font-weight: bold;
   color: #555;
+  font-size: 14px;
 }
 
-input, select, textarea {
-  margin-top: 5px;
-  padding: 10px;
+input, select {
+  margin-top: 4px;
+  padding: 8px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  font-size: 14px;
 }
 
 button {
-  margin-top: 20px;
-  padding: 12px;
+  margin-top: 15px;
+  padding: 10px;
   border: none;
   border-radius: 8px;
   background-color: #5a099c;
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
 }
 
@@ -55,24 +60,43 @@ button:hover {
   background-color: #a864e0;
 }
 
-.terms {
-  margin-top: 15px;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-}
-
-.terms input {
-  margin-right: 8px;
-}
-
 p {
   margin-top: 20px;
   text-align: center;
   font-size: 14px;
 }
+
 p a {
   color: #5a099c;
-  text-decoration: none; /* quita el subrayado */
+  text-decoration: none;
   font-weight: bold;
+}
+
+/* Mensajes */
+.mensaje-registro {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mensaje-registro.show {
+  display: block;
+  opacity: 1;
+}
+
+.mensaje-registro.exito {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.mensaje-registro.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
 }
