@@ -1,21 +1,40 @@
+/* ================================
+   REINICIO DE ESPACIADOS BÁSICOS
+=================================*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-
-  body {
-  font-family: 'Arial', sans-serif;
-  background: #2d006a;
-  display: flex;
-  flex-direction: column; /* organiza login + footer verticalmente */
-  justify-content: center; /* centra el login */
-  min-height: 100vh;
-  margin: 0;
 }
 
-  
-  .login-container {
+/* ================================
+   ESTILOS GENERALES DEL DOCUMENTO
+   Fondo morado + fuente general
+=================================*/
+body {
+    font-family: 'Arial', sans-serif;
+    background: #2d006a;
+    display: flex;
+    flex-direction: column; /* Permite mantener login arriba y footer abajo */
+    justify-content: center; /* Centra verticalmente */
+    min-height: 100vh; /* Ocupa toda la pantalla */
+    margin: 0;
+}
+
+/* ================================
+   CONTENEDOR PRINCIPAL DEL LOGIN
+=================================*/
+.main-container {
+    flex: 1; /* Empuja el footer al final */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================================
+   TARJETA DEL FORMULARIO
+=================================*/
+.login-container {
     background: white;
     padding: 30px 20px;
     border-radius: 12px;
@@ -23,39 +42,49 @@
     width: 90%;
     max-width: 400px;
     text-align: center;
-  }
-  
-  .bienvenida {
+}
+
+/* Encabezado de bienvenida */
+.bienvenida {
     font-size: 20px;
     margin-bottom: 10px;
     color: #6a0dad; 
-  }
-  
-  h2 {
+}
+
+/* Subtítulo */
+h2 {
     margin-bottom: 20px;
     color: #333;
-  }
-  
-  form {
+}
+
+/* ================================
+   FORMULARIO Y CAMPOS
+=================================*/
+form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-  }
-  
-  label {
+}
+
+/* Labels de los inputs */
+label {
     text-align: left;
     font-size: 14px;
     color: #555;
-  }
-  
-  input {
+}
+
+/* Campos de entrada */
+input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 16px;
-  }
-  
-  button {
+}
+
+/* ================================
+   BOTÓN DE LOGIN
+=================================*/
+button {
     background-color: #6a0dad; 
     color: white;
     padding: 12px;
@@ -64,76 +93,77 @@
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #5a099c;
-  }
-  
-  .register-text {
+}
+
+/* Enlace hacia la página de registro */
+.register-text {
     margin-top: 15px;
     font-size: 14px;
-  }
-  
-  .register-text a {
+}
+
+.register-text a {
     color: #6a0dad;
     text-decoration: none;
-  }
-  .ayuda-btn {
-  position: fixed;        /* lo fija en la pantalla */
-  bottom: 20px;           /* distancia desde abajo */
-  right: 20px;            /* distancia desde la derecha */
-  background-color: #25D366; /* verde de WhatsApp */
-  color: white;
-  border: none;
-  border-radius: 50px;    /* lo hace redondito */
-  padding: 15px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
-  transition: background 0.3s ease;
+}
+
+/* ================================
+   BOTÓN FLOTANTE DE AYUDA
+=================================*/
+.ayuda-btn {
+    position: fixed; /* Siempre visible en pantalla */
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366; /* Verde estilo WhatsApp */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
 }
 
 .ayuda-btn:hover {
-  background-color: #1ebe5d; /* verde más oscuro al pasar el mouse */
+    background-color: #1ebe5d;
 }
+
+/* ================================
+   MENSAJES DE ERROR / ÉXITO
+=================================*/
 .mensaje-login {
-  margin-top: 15px;
-  padding: 10px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-align: center;
-  display: none; /* oculto al inicio */
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: none; /* Oculto hasta que el JS lo muestre */
 }
 
 .mensaje-login.exito {
-  background-color: #d4edda;
-  color: #5a099c;
-  border: 1px solid #c3e6cb;
+    background-color: #d4edda; /* Verde claro */
+    color: #5a099c; /* Morado corporativo */
+    border: 1px solid #c3e6cb;
 }
 
 .mensaje-login.error {
-  background-color: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
+    background-color: #f8d7da; /* Rojo claro */
+    color: #721c24;
+    border: 1px solid #f5c6cb;
 }
+
+/* ================================
+   FOOTER DEL SISTEMA
+=================================*/
 .footer {
-  text-align: center;
-  color: #fff; /* color blanco para contrastar con fondo morado */
-  font-size: 0.9em;
-  padding: 15px 0;
-  border-top: 1px solid rgba(255,255,255,0.2);
-  margin-top: auto; /* lo empuja hacia el final */
+    text-align: center;
+    color: #fff;
+    font-size: 0.9em;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: auto; /* Se queda al final */
 }
-.main-container {
-  flex: 1; /* ocupa todo el espacio disponible */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
-
-
-  
