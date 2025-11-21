@@ -7,6 +7,17 @@ const lista = document.getElementById("lista-agotados"); // Contenedor donde se 
 // Si no hay productos guardados, se inicializa como un array vacío
 let productos = JSON.parse(localStorage.getItem("productosAgotados")) || [];
 
+// Agregar productos por defecto si es la primera vez que se carga la página
+if (productos.length === 0) {
+    productos = [
+        { nombre: "Leche Entera Colanta", detalle: "Quedan 2 unidades" },
+        { nombre: "Leche Entera Alpina", detalle: "Quedan 0 unidades" },
+        { nombre: "Arroz Diana", detalle: "Quedan 5 unidades" },
+        { nombre: "Azúcar Refinada", detalle: "Quedan 3 unidades" }
+    ];
+    localStorage.setItem("productosAgotados", JSON.stringify(productos));
+}
+
 // Llamamos a la función para mostrar los productos al cargar la página
 renderizarProductos();
 
