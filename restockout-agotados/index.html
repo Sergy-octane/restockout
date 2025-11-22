@@ -7,6 +7,7 @@
   <!-- Enlazamos el CSS principal que controla estilos de la página -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <!-- Contenedor principal de la app -->
   <div class="app-container">
@@ -20,6 +21,13 @@
       <!-- Icono de micrófono para búsqueda por voz (visual solo) -->
       <img src="Microfono.png" alt="Micrófono" class="icono" />
     </div>
+
+    <!-- >>> Breadcrumb simple y accesible <<< -->
+    <nav class="breadcrumb" aria-label="Ubicación">
+      <a href="../restockout-dashboard/index.html">Inicio</a>
+      <span class="sep">›</span>
+      <span>Leche entera</span>
+    </nav>
 
     <!-- Título de la categoría actual -->
     <h2 class="categoria">Leche entera</h2>

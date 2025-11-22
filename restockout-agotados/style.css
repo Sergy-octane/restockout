@@ -82,4 +82,26 @@ body {
     border-radius: 5px;
     font-size: 13px;
   }
-  
+  /* Breadcrumb simple y accesible */
+.breadcrumb {
+  font-size: 14px;
+  color: #ddd;               /* color claro sobre fondo oscuro */
+  margin: 10px 0;            /* separación entre header y título */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb a {
+  color: #fff;               /* enlace visible */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .sep {
+  color: #999;               /* separador menos destacado */
+}

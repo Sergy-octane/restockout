@@ -85,3 +85,15 @@ document.getElementById("ayuda-btn").addEventListener("click", () => {
   const url = `https://wa.me/${numero}?text=${mensaje}`;
   window.open(url, "_blank"); // abrir en pestaña nueva
 });
+// --- BREADCRUMB: BOTÓN PARA VOLVER AL LOGIN ---
+// Seleccionamos el botón del breadcrumb
+const breadcrumbBtn = document.getElementById("breadcrumb-btn");
+
+const logoutBtn = document.getElementById("logoutBtn");
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", () => {
+    window.location.href = "../index.html";
+  });
+}
+
+

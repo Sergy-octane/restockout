@@ -167,3 +167,21 @@ body {
 .ayuda-btn:hover {
     background-color: #1ebe5d; /* verde más oscuro */
 }
+.logout-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 999;
+}
+
+.logout-btn:hover {
+  background-color: #c62828;
+}
