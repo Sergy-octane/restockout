@@ -1,53 +1,100 @@
+<!-- Indica que este archivo es un documento HTML5 -->
 <!DOCTYPE html>
+
+<!-- Lenguaje principal del contenido -->
 <html lang="es">
+
 <head>
+  <!-- Configura la codificación para permitir acentos y caracteres especiales -->
   <meta charset="UTF-8">
+
+  <!-- Hace que el diseño sea adaptable a móviles (responsive) -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título que aparece en la pestaña del navegador -->
   <title>Recuperar Contraseña - RestockOut</title>
+
+  <!-- Vincula el archivo CSS que da estilo a esta página -->
   <link rel="stylesheet" href="recuperar.css">
 </head>
+
 <body>
-  <header>
+
+  <!-- ENCABEZADO DE LA PÁGINA -->
+  <!-- role="banner": ayuda a lectores de pantalla a identificar esta sección -->
+  <header role="banner">
+    <!-- Nombre o logo del proyecto -->
     <h1>RestockOut</h1>
   </header>
 
+  <!-- CONTENIDO PRINCIPAL -->
   <main class="contenedor">
+    <!-- Título principal de esta vista -->
     <h2>Recuperar Contraseña</h2>
+
+    <!-- Texto explicativo para guiar al usuario -->
     <p>Ingresa tu correo electrónico y te enviaremos las instrucciones para recuperar tu cuenta.</p>
 
+    <!-- FORMULARIO para escribir el correo -->
     <form id="recuperarForm">
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" placeholder="ejemplo@correo.com" required>
 
+      <!-- Etiqueta asociada al campo de correo -->
+      <label for="email">Correo electrónico:</label>
+
+      <!-- Campo donde el usuario escribe su correo -->
+      <input type="email" id="email" placeholder="ejemplo@correo.com" required>
+      <!-- type="email": obliga a que sea un correo con formato válido -->
+      <!-- required: evita enviar el formulario sin completar este campo -->
+
+      <!-- Botón para enviar el formulario -->
       <button type="submit">Enviar</button>
     </form>
 
+    <!-- Párrafo donde se mostrará un mensaje de error o confirmación -->
     <p id="mensaje"></p>
 
+    <!-- Enlace para volver al inicio -->
     <a href="index.html" class="volver">Volver al inicio</a>
   </main>
 
-  <footer>
+  <!-- PIE DE PÁGINA -->
+  <!-- role="contentinfo": lo identifica como información secundaria -->
+  <footer role="contentinfo">
     <p>© 2025 RestockOut — Todos los derechos reservados.</p>
   </footer>
 
+  <!-- SCRIPT: Lógica para validar y mostrar mensajes al enviar el formulario -->
   <script>
+    // Obtiene el formulario por su ID para poder usarlo en JS
     const form = document.getElementById('recuperarForm');
+
+    // Párrafo donde se colocarán los mensajes para el usuario
     const mensaje = document.getElementById('mensaje');
 
+    // Evento que se ejecuta cuando el formulario intenta enviarse
     form.addEventListener('submit', (e) => {
+
+      // Evita que la página recargue al enviar el formulario
       e.preventDefault();
+
+      // Obtiene el valor del correo ingresado y elimina espacios
       const email = document.getElementById('email').value.trim();
 
+      // Si el campo está vacío, muestra un mensaje de error
       if (email === "") {
         mensaje.textContent = "Por favor, escribe un correo válido.";
         mensaje.style.color = "red";
+
+      // Si está lleno, muestra un mensaje de éxito
       } else {
         mensaje.textContent = "Las instrucciones han sido enviadas a tu correo.";
         mensaje.style.color = "green";
+
+        // Limpia el formulario después de enviarlo
         form.reset();
       }
     });
   </script>
+
 </body>
 </html>

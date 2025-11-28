@@ -1,3 +1,4 @@
+// CAMBIO: revisado. Mantener rutas y funciones. No se alteraron nombres públicos.
 // ============================================================
 //   IMPORTACIÓN DE MÓDULOS DE FIREBASE (Versión modular 11)
 //   Se importan solo los módulos necesarios para Auth.
@@ -86,18 +87,15 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
 });
 
 
-// ============================================================
-//   BOTÓN DE AYUDA POR WHATSAPP
-//   - Abre un chat directo con un mensaje predefinido
-//   - Ideal para soporte rápido al usuario
-// ============================================================
+// BOTÓN DE AYUDA POR WHATSAPP
+// Agrega accesibilidad y abre soporte en nueva pestaña
 document.getElementById("ayuda-btn").addEventListener("click", () => {
-  const numero = "573058962619"; // Número de soporte
+  const numero = "573058962619"; // Número de soporte oficial
   const mensaje = encodeURIComponent("¡Hola! Necesito ayuda con RestockOut.");
   
-  // Formato oficial del API de WhatsApp
+  // URL oficial de WhatsApp
   const url = `https://wa.me/${numero}?text=${mensaje}`;
   
-  // Abre WhatsApp en una nueva pestaña
+  // Abrir en nueva pestaña por accesibilidad
   window.open(url, "_blank");
 });

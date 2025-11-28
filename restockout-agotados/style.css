@@ -1,24 +1,47 @@
+/* CAMBIO: se corrigió estructura para que el footer quede abajo */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #2d006a; 
+    background-color: #2d006a;
     color: white;
+
+    /* ==========================================
+       CORRECCIÓN: el body debe ser un contenedor
+       en columna para que el footer se alinee abajo
+       ========================================== */
     display: flex;
-    justify-content: center;
-  }
-  
-  .app-container {
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.app-container {
     width: 100%;
     max-width: 360px;
     background-color: #2d006a;
-    min-height: 100vh;
     padding: 10px;
     box-sizing: border-box;
-  }
-  
 
-  .header {
+    margin: 0 auto; /* centrar horizontalmente */
+}
+
+/* ==========================================
+   FOOTER PEGADO ABAJO SIEMPRE
+   ========================================== */
+footer {
+    margin-top: auto;            /* empuja el footer al final */
+    background: rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 12px;
+    color: white;
+    font-size: 14px;
+}
+
+
+/* Estilos del header */
+
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,54 +49,52 @@ body {
     padding: 5px 10px;
     border-radius: 10px;
     margin-bottom: 15px;
-  }
-  
-  .icono {
+}
+
+.icono {
     width: 24px;
     height: 24px;
-  }
-  
-  .search-box {
+}
+
+.search-box {
     flex: 1;
     margin: 0 10px;
     padding: 6px 10px;
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 14px;
-  }
-  
+}
 
-  .categoria {
+.categoria {
     background-color: #9148b3;
     color: white;
     padding: 8px;
     border-radius: 5px;
     text-align: center;
     margin-bottom: 15px;
-  }
-  
+}
 
-  .grid-productos {
+.grid-productos {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
-  }
-  
-  .producto {
+}
+
+.producto {
     background: white;
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
     color: black;
-  }
-  
-  .producto img {
+}
+
+.producto img {
     width: 100%;
     height: 150px;
     object-fit: cover;
-  }
-  
-  .estado {
+}
+
+.estado {
     background-color: #8b1589;
     color: white;
     display: inline-block;
@@ -81,27 +102,28 @@ body {
     margin: 5px 0;
     border-radius: 5px;
     font-size: 13px;
-  }
-  /* Breadcrumb simple y accesible */
+}
+
+/* Breadcrumb simple y accesible */
 .breadcrumb {
-  font-size: 14px;
-  color: #ddd;               /* color claro sobre fondo oscuro */
-  margin: 10px 0;            /* separación entre header y título */
-  display: flex;
-  align-items: center;
-  gap: 8px;
+    font-size: 14px;
+    color: #ddd;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .breadcrumb a {
-  color: #fff;               /* enlace visible */
-  text-decoration: none;
-  font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 .breadcrumb a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .breadcrumb .sep {
-  color: #999;               /* separador menos destacado */
+    color: #999;
 }

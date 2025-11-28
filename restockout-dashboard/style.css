@@ -1,21 +1,44 @@
+/* CAMBIO: revisado y posiblemente editado para accesibilidad y consistencia. */
 /* Reset y estilo base del body */
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif; /* fuente general */
-    background-color: #2d006a;       /* fondo morado */
-    color: white;                    /* texto blanco por defecto */
+    font-family: Arial, sans-serif;
+    background-color: #2d006a;
+    color: white;
+
+    /* ================================
+       CAMBIO PARA QUE EL FOOTER QUEDE ABAJO
+       ================================ */
     display: flex;
-    justify-content: center;         /* centra horizontalmente la app */
+    flex-direction: column; /* Contenido en columna */
+    min-height: 100vh;      /* Página siempre ocupa toda la altura */
 }
+
 
 /* Contenedor principal de la app */
 .app-container {
     width: 100%;
-    max-width: 360px;                /* ancho máximo para móviles */
+    max-width: 360px;
     padding: 15px;
     box-sizing: border-box;
+
+    margin: 0 auto; /* Centrar horizontalmente */
 }
+
+
+/* ================================
+   FOOTER PEGADO ABAJO SIEMPRE
+   ================================ */
+footer {
+    margin-top: auto;             /* Empuja el footer al fondo */
+    background: rgba(0,0,0,0.15);
+    text-align: center;
+    padding: 12px;
+    color: white;
+    font-size: 14px;
+}
+
 
 /* Logo de la app */
 .logo {

@@ -1,25 +1,47 @@
+/* CAMBIO: revisado y posiblemente editado para accesibilidad y consistencia. */
 /* Estilos generales de la página */
 body {
-  font-family: Arial, sans-serif; /* Fuente principal */
-  background-color: #5a099c; /* Fondo morado del proyecto */
-  display: flex; /* Usamos flexbox para centrar */
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: flex-start; /* Colocar el contenido un poco arriba */
-  height: 100vh; /* Alto del viewport */
+  font-family: Arial, sans-serif;
+  background-color: #2d006a;
+  
+  /* CAMBIO: layout vertical para que el footer quede abajo */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* Permite que el footer baje */
+
   margin: 0; 
-  padding-top: 60px; /* Espacio superior */
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #5a099c;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
-/* Contenedor principal del formulario de registro */
+
+/* CAMBIO: el contenedor central ahora se centra sin afectar el footer */
 .register-container {
-  background: #fff; /* Fondo blanco */
-  padding: 20px; /* Espaciado interno */
-  border-radius: 12px; /* Bordes redondeados */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra del recuadro */
-  width: 90%;          /* Ocupa el 90% del ancho disponible */
-  max-width: 380px;    /* Pero no crece más de 380px */
-  margin-top: 30px; /* Separación vertical */
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  width: 90%;
+  max-width: 380px;
+  margin: 40px auto;  /* Centrado y separación */
 }
+
+/* CAMBIO: footer al final siempre */
+footer {
+  margin-top: auto;
+  background: rgba(0,0,0,0.15);
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
+
 
 /* Título principal */
 h1 {
@@ -117,4 +139,28 @@ p a {
   background-color: #f8d7da; /* Rojo claro */
   color: #721c24; /* Rojo fuerte */
   border: 1px solid #f5c6cb;
+}
+/* ================================
+   ENCABEZADO (HEADER)
+   Pasar a fondo blanco
+================================ */
+header {
+    background-color:#2d006a; /* Fondo blanco */
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Suave sombra para separarlo */
+}
+
+header .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenido */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .app-name {
+    color: #fff; /* Morado del branding */
+    font-weight: bold;
 }

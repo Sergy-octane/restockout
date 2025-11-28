@@ -1,3 +1,4 @@
+/* CAMBIO: revisado y posiblemente editado para accesibilidad y consistencia. */
 /* ================================
    REINICIO DE ESPACIADOS BÁSICOS
 =================================*/
@@ -20,6 +21,7 @@ body {
     min-height: 100vh; /* Ocupa toda la pantalla */
     margin: 0;
 }
+
 
 /* ================================
    CONTENEDOR PRINCIPAL DEL LOGIN
@@ -170,4 +172,28 @@ button:hover {
     padding: 15px 0;
     border-top: 1px solid rgba(255,255,255,0.2);
     margin-top: auto; /* Se queda al final */
+}
+/* ================================
+   ENCABEZADO (HEADER)
+   Pasar a fondo blanco
+================================ */
+header {
+    background-color:#2d006a; /* Fondo blanco */
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Suave sombra para separarlo */
+}
+
+header .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenido */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .app-name {
+    color: #fff; /* Morado del branding */
+    font-weight: bold;
 }

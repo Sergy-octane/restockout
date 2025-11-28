@@ -11,6 +11,17 @@
 </head>
 
 <body>
+    
+<!-- CAMBIO: se añadió header básico (ajústalo según identidad corporativa) -->
+<header role="banner">
+  <div class="container">
+    <h1 class="app-name">Restockout</h1>
+    <nav aria-label="Menú principal">
+      <!-- TOCA: Mantén las rutas actuales. -->
+    </nav>
+  </div>
+</header>
+
 
   <!-- Contenedor principal del login -->
   <div class="main-container">
@@ -54,12 +65,18 @@
   </div>
 
   <!-- Pie de página del sistema -->
-  <footer class="footer">
+  <footer role="contenido"  class="footer">
     © 2025 RestockOut - Todos los derechos reservados.
   </footer>
 
-  <!-- Botón de ayuda general -->
-  <button id="ayuda-btn" class="ayuda-btn">¿Necesitas ayuda?</button>
+  <!-- Botón de ayuda accesible -->
+<button 
+  id="ayuda-btn" 
+  class="ayuda-btn"
+  aria-label="Abrir chat de ayuda por WhatsApp"
+>
+  ¿Necesitas ayuda?
+</button>
 
   <!-- Lógica del login con Firebase -->
   <script type="module" src="inicio de sesion/script.js"></script>

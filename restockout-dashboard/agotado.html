@@ -1,45 +1,80 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Indica que el documento es HTML5 -->
+<html lang="es"> <!-- El idioma principal del sitio -->
+
 <head>
-    <meta charset="UTF-8">
-    <title>Reportar Producto Agotado - RestockOut</title>
-    <!-- Enlaza la hoja de estilos específica para esta página -->
+    <meta charset="UTF-8"> <!-- Permite acentos y caracteres especiales -->
+
+    <!-- Hace que la página se vea bien en celular, tablet y PC -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reportar Producto Agotado - RestockOut</title> <!-- Título en la pestaña del navegador -->
+
+    <!-- Enlaza el archivo de estilos de esta página (NO tocar ruta) -->
     <link rel="stylesheet" href="agotado.css">
 </head>
-<body>
-    <div class="container">
-        <!-- Título de la página -->
-        <h2>Reportar Producto Agotado</h2>
 
-        <!-- >>> Breadcrumb simple y accesible <<< -->
+<body>
+
+<!-- ===== ENCABEZADO PRINCIPAL ===== -->
+<header class="header"> <!-- Barra superior de la aplicación -->
+    <!-- Nombre de la aplicación -->
+    <h1 class="titulo-app">RestockOut</h1>
+</header>
+
+<!-- ===== CONTENEDOR PRINCIPAL ===== -->
+<main class="wrapper"> <!-- Envuelve todo el contenido de la tarjeta -->
+    <section class="card"> <!-- Tarjeta blanca donde está el formulario -->
+
+        <!-- Título principal de la página -->
+        <h2 class="titulo-pagina">Reportar Producto Agotado</h2>
+
+        <!-- Migas de pan: indican dónde está el usuario -->
         <nav class="breadcrumb" aria-label="Ubicación">
-            <a href="index.html">Inicio</a>
-            <span class="sep">›</span>
-            <span>Reportar Agotado</span>
+            <a href="index.html">Inicio</a> <!-- Ruta a la página principal -->
+            <span class="sep">›</span> <!-- Separador visual -->
+            <span>Reportar Agotado</span> <!-- Ubicación actual -->
         </nav>
 
-        <!-- Formulario para reportar un producto -->
-        <form id="reportForm">
-            <!-- Input para el nombre del producto -->
+        <!-- ===== FORMULARIO PARA REPORTAR ===== -->
+        <form id="reportForm"> <!-- Formulario identificado por ID -->
+
+            <!-- Etiqueta del campo de texto -->
             <label for="producto">Nombre del producto:</label>
+
+            <!-- Input donde se escribe el nombre -->
             <input type="text" id="producto" name="producto" required>
 
-            <!-- Textarea para observaciones o detalles adicionales -->
+            <!-- Etiqueta del textarea -->
             <label for="detalle">Observaciones:</label>
-            <textarea id="detalle" name="detalle" rows="4" required></textarea>
 
-            <!-- Botón de envío del formulario -->
-            <button type="submit">Reportar</button>
+            <!-- Textarea para más detalles -->
+            <textarea id="detalle" name="detalle" rows="3" required></textarea>
+
+            <!-- Botón para enviar el formulario -->
+            <button type="submit" class="btn-guardar">➕ Reportar</button>
         </form>
 
-        <!-- Mensaje que aparece cuando el producto se reporta correctamente -->
-        <div class="message" id="mensaje">✅ Producto reportado correctamente.</div>
+        <!-- Mensaje que aparece después de guardar -->
+        <div class="message" id="mensaje">
+            ✅ Producto reportado correctamente.
+        </div>
 
-        <!-- Contenedor donde se mostrarán los productos reportados -->
-        <div id="lista-agotados"></div>
-    </div>
+        <!-- Subtítulo de la lista -->
+        <h3 class="subtitulo-lista">Productos reportados</h3>
 
-    <!-- Enlaza el script que controla la funcionalidad de reportar productos -->
-    <script src="agotado.js"></script>
+        <!-- Aquí se carga la lista desde JavaScript -->
+        <div id="lista-agotados" class="lista-agotados"></div>
+
+    </section>
+</main>
+
+<!-- ===== PIE DE PÁGINA ===== -->
+<footer>
+    <p>© 2025 RestockOut - Todos los derechos reservados.</p>
+</footer>
+
+<!-- Archivo JavaScript que controla la lógica (NO tocar ruta) -->
+<script src="agotado.js"></script>
+
 </body>
 </html>

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- CAMBIO: se añadió meta viewport para responsividad -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta charset="UTF-8">
   <title>Registro - RestockOut</title>
 
@@ -8,6 +11,17 @@
   <link rel="stylesheet" href="register.css">
 </head>
 <body>
+    <!-- CAMBIO: Recomendado usar <main> para el contenido principal -->
+<!-- CAMBIO: se añadió header básico (ajústalo según identidad corporativa) -->
+<header role="banner">
+  <div class="container">
+    <h1 class="app-name">RestockOut</h1>
+    <nav aria-label="Menú principal">
+      <!-- TOCA: Mantén las rutas actuales. -->
+    </nav>
+  </div>
+</header>
+
 
   <div class="register-container">
 
@@ -70,5 +84,12 @@
 
   <!-- Archivo JS encargado del registro y Firebase Auth -->
   <script type="module" src="register.js"></script>
+
+<!-- CAMBIO: se añadió footer básico -->
+<footer role="contentinfo">
+  <div class="container">
+    <p>&copy; 2025 NombreAplicacion - Todos los derechos reservados.</p>
+  </div>
+</footer>
 </body>
 </html>
