@@ -145,11 +145,15 @@ button:hover {
 }
 
 .mensaje-login.exito {
-    background-color: #d4edda; /* Verde claro */
-    color: #5a099c; /* Morado corporativo */
+    /* Fondo verde claro */
+    background-color: #d4edda; 
+    /*
+      ANTES: color: #5a099c; (Malo)
+      AHORA: Usamos el morado oscuro del fondo (o negro), que SÍ cumple contraste.
+    */
+    color: #2D006A; /* Morado Oscuro para asegurar contraste 
     border: 1px solid #c3e6cb;
 }
-
 .mensaje-login.error {
     background-color: #f8d7da; /* Rojo claro */
     color: #721c24;

@@ -16,7 +16,8 @@ body {
   padding: 20px; /* Espaciado interno */
   border-radius: 12px; /* Bordes redondeados */
   box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra del recuadro */
-  width: 340px; /* Ancho fijo */
+  width: 90%;          /* Ocupa el 90% del ancho disponible */
+  max-width: 380px;    /* Pero no crece más de 380px */
   margin-top: 30px; /* Separación vertical */
 }
 
