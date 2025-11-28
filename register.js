@@ -64,7 +64,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
   }
 
   try {
-    // --- 🔐 Crear el usuario en Firebase Authentication ---
+    // ---  Crear el usuario en Firebase Authentication ---
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const user = userCredential.user; // Obtenemos el usuario creado.
 
